@@ -18,7 +18,7 @@ Phase 0 only. Static checks (lint, type check, production build) pass. **Runtime
 ## Manual Console actions (required, cannot be done from code)
 
 1. **AI Logic**: Firebase console > AI Services > AI Logic > Get started, choose **Gemini Developer API** (no billing needed). This also enforces App Check for AI Logic.
-2. **App Check app registration**: Security > App Check > Apps > register Orynti Web with **reCAPTCHA v3** (create the site key in Google Cloud/reCAPTCHA; put the public site key in `.env.local`). Do not add `localhost` to reCAPTCHA allowed domains.
+2. **App Check app registration**: Security > App Check > Apps > register Orynti Web with **reCAPTCHA Enterprise** (create the site key in Google Cloud/reCAPTCHA; put the public site key in `.env.local`). Do not add `localhost` to reCAPTCHA allowed domains.
 3. **Debug token**: App Check > Apps > Orynti Web > overflow menu > **Manage debug tokens**, add the token printed in the console.
 
 ## Files

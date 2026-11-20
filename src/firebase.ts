@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { initializeAppCheck, ReCaptchaV3Provider, getToken } from 'firebase/app-check'
+import { initializeAppCheck, ReCaptchaEnterpriseProvider, getToken } from 'firebase/app-check'
 import { getAI, getGenerativeModel, GoogleAIBackend, InferenceMode } from 'firebase/ai'
 
 const env = import.meta.env
@@ -41,7 +41,7 @@ if (app && import.meta.env.DEV && isLocalhost) {
 
 const appCheck = app
   ? initializeAppCheck(app, {
-      provider: new ReCaptchaV3Provider(env.VITE_APPCHECK_RECAPTCHA_SITE_KEY),
+      provider: new ReCaptchaEnterpriseProvider(env.VITE_APPCHECK_RECAPTCHA_SITE_KEY),
       isTokenAutoRefreshEnabled: true,
     })
   : null
