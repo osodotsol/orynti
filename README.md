@@ -4,7 +4,12 @@ Minimal Vite + React + TypeScript app that checks Firebase AI Logic hybrid infer
 
 ## Status
 
-Phase 0 only. Static checks (lint, type check, production build) pass. **Runtime tests are still pending**: the ON_DEVICE, IN_CLOUD and PREFER_ON_DEVICE tests and the App Check token check have not been run yet. Results will be recorded in [VERIFICATION.md](VERIFICATION.md).
+Phase 0 only. Static checks (lint, type check, production build) pass, and the five Phase 0 production checks passed on November 20, 2026: App Check token, ON_DEVICE, IN_CLOUD, PREFER_ON_DEVICE, and the WebP-input cloud fallback. See [VERIFICATION.md](VERIFICATION.md) for the actual results and limitations.
+
+**Still unverified:**
+- Fallback to the cloud when the on-device model itself is unavailable (only the unsupported-input fallback was tested).
+- Document masking (no document features exist yet).
+- Sensitive-data leakage prevention (no leakage audit has been done).
 
 ## Run it
 
